@@ -14,8 +14,8 @@ services:
     image: dpage/pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: abraao.silva@sbwebservicesext.net
-      PGADMIN_DEFAULT_PASSWORD: 0fd01f753
+      PGADMIN_DEFAULT_EMAIL: abraao.silva@teste.com
+      PGADMIN_DEFAULT_PASSWORD: r23423
     ports:
       - "8000:80"
     volumes:
