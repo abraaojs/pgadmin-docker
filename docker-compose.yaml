@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:  
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - "$PWD/dbdata:/var/lib/postgresql/data"
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: abraao.silva@sbwebservicesext.net
+      PGADMIN_DEFAULT_PASSWORD: 0fd01f753
+    ports:
+      - "8000:80"
+    volumes:
+      - "$PWD/pgadmindata:/var/lib/pgadmin"
+
+volumes:
+  dbdata:
+  pgadmindata:
+
